@@ -74,7 +74,13 @@ function getUsername(){
   				document.getElementById("navbar").style.visibility = "hidden";
 			});
 
-			loginApp(name);
+		
+  document.getElementById("event_list").style.display = "inline-block";
+  document.getElementById("login").style.display = "none";
+  document.getElementById("navbar").style.visibility = "visible";
+  document.getElementById("userbtn").innerHTML = name;
+
+
 }
 
 
