@@ -67,14 +67,12 @@ function loginUser(){
 
 function getUsername(){
 	liff.getProfile()
-	.then(profile => {
-				const name = profile.displayName
-			})
-	.catch((error) => {
-				console.log('error get username', error);
-			})
-
-	alert(name);
+		.then(profile => {
+  			const name = profile.displayName
+		})
+		.catch((err) => {
+  			console.log('error', err);
+		});
 		
   document.getElementById("event_list").style.display = "inline-block";
   document.getElementById("login").style.display = "none";
