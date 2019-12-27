@@ -66,14 +66,15 @@ function loginUser(){
 }
 
 function getUsername(){
-	liff.getProfile().then(profile => {
+	liff.getProfile()
+	.then(profile => {
 				const name = profile.displayName
-			}).catch((error) => {
-				document.getElementById("event_list").style.display = "none";
-  				document.getElementById("login").style.display = "block";
-  				document.getElementById("navbar").style.visibility = "hidden";
-			});
+			})
+	.catch((error) => {
+				console.log('error get username', error);
+			})
 
+	alert(name);
 		
   document.getElementById("event_list").style.display = "inline-block";
   document.getElementById("login").style.display = "none";
