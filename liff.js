@@ -6,7 +6,7 @@ window.onload = function() {
 
     myLiffId = defaultLiffId;
     
-    initializeLiffOrDie(myLiffId);
+    inisialisasiLiff(myLiffId);
 
 }
 
