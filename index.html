@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div class="navbar" style="visibility: hidden;" id="navbar">
+  		<a id="home" onclick="home()" class="active">Home</a>
+  		<a id="orderlist" onclick="orderlist()">Order List</a>
+  		<div class="user">
+  		<button class="userbtn" onclick="userdropdown()" id="userbtn">
+    	<i class="fa fa-caret-down"></i>
+  		</button>
+  			<div class="user-content" id="user">
+			    <a onclick="logout()">Logout</a>
+  			</div>
+  		</div>  
+	</div>
+
+	<div class="login" id="login">
+		<h3>Please Login into your LINE account before using this application</h3>
+		<h3><span id="infoclient"></span></h3>
+		<!-- <button class="loginbtn" onclick="loginApp()">LOGIN WITH <strong>LINE ACCOUNT</strong></button> -->
+		<button class="loginbtn" onclick="loginUser()">LOGIN WITH <strong>LINE ACCOUNT</strong></button>
+		<h3>OR</h3>
+		<button id="externalBrowser" class="externalBrowser" onclick="externalBrowser()">OPEN IN <strong>EXTERNAL BROWSER</strong></button>
+	</div>
+
+	<div class="order_list" id="order_list" style="display: none;">
+		<!-- <table>
+			<tr>
+				<th>ID Order</th>
+				<th>Event</th>
+				<th>Date</th>
+				<th>Location</th>
+				<th>Price</th>
+			</tr>
+			<tr>
+
+			</tr>
+		</table> -->
+	</div>
+
+
+	<div id="event_list" class="event_list" style="display: none;">
+			<h1>EVENT</h1>
+
+			<div class="event">
+				<div class="gambar"><img src="img/javajazz.png"></div>
+				<h1 id="event">Java Jazz 2019</h1>
+				<P>Date : <span id="date">01/03/2019</span></P>
+				<p>Location : <span id="location">JIEXPO KEMAYORAN, Jakarta</span></p>
+				<p>Price : <span id="price">Rp. 700.000</span></p>
+			<button class="order" onclick="orderEvent1()">ORDER</button>
+			</div>
+
+			<div class="event">
+				<div class="gambar"><img src="img/tedx.jpg"></div>
+				<h1 id="event2">Ted X Jakarta</h1>
+				<P>Date : <span id="date2">31/08/2019</span></P>
+				<p>Location : <span id="location2">Graha Bhakti Budaya, Jakarta</span></p>
+				<p>Price : <span id="price2">Rp. 300.000</span></p>
+			<button class="order" onclick="orderEvent2()">ORDER</button>
+			</div>
+
+			<div class="event">
+				<div class="gambar"><img src="img/jakcloth.jpg"></div>
+				<h1 id="event3">JakCloth Year End Sale</h1>
+				<P>Date : <span id="date3">25/12/2019</span></P>
+				<p>Location : <span id="location3">Plaza Tenggara GBK Senayan, Jakarta</span></p>
+				<p>Price : <span id="price3">Free</span></p>
+			<button class="order" onclick="orderEvent3()">ORDER</button>
+			</div>
+
+			<div class="event">
+				<div class="gambar"><img src="img/javajazz2020.png"></div>
+				<h1 id="event4">Java Jazz 2020</h1>
+				<P>Date : <span id="date4">28/02/2020</span></P>
+				<p>Location : <span id="location4">JIEXPO KEMAYORAN, Jakarta</span></p>
+				<p>Price : <span id="price4">Rp. 500.000</span></p>
+			<button class="order" onclick="orderEvent4()">ORDER</button>
+			</div>
+
+			<div class="event">
+				<div class="gambar"><img src="img/education.jpg"></div>
+				<h1 id="event5">International Education</h1>
+				<P>Date : <span id="date5">12/01/2020</span></P>
+				<p>Location : <span id="location5">Mercure Hotel Alam Sutera (Ballroom), Tangerang</span></p>
+				<p>Price : <span id="price5">Free</span></p>
+			<button class="order" onclick="orderEvent5()">ORDER</button>
+			</div>
+
+			<div class="event">
+				<div class="gambar"><img src="img/property.jpg"></div>
+				<h1 id="event6">JATIM PROPERTY EXPO 2020</h1>
+				<P>Date : <span id="date6">12/02/2020</span></P>
+				<p>Location : <span id="location6">Kaza City Surabaya, Jawa Timur</span></p>
+				<p>Price : <span id="price6">Free</span></p>
+			<button class="order" onclick="orderEvent6()">ORDER</button>
+			</div>					
+	</div>
+</body>
+<script src="script.js"></script>
+<script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script type="text/javascript" src="liff.js"></script>
+</html>
