@@ -88,14 +88,16 @@ function senddata(){
         var data_app = "";
         if (list_event != null && list_event.length > 0) {
             for (i in list_event) {
-            liff.sendMessage([
-			{
-				type : 'text',
-				text : "Anda telah memesan tiket "+list_event[i].event+", pada tanggal "+list_event[i].date+" yang berlokasi di "+list_event[i].location+" dengan harga tiket "+list_event[i].price+""
-			}]).then(() => {
-				console.log("message terkirim");
-			}).catch((error) => {console.log('error', error);});
-        }
+	            liff.sendMessage([
+				{
+					type : 'text',
+					text : "Anda telah memesan tiket "+list_event[i].event+", pada tanggal "+list_event[i].date+" yang berlokasi di "+list_event[i].location+" dengan harga tiket "+list_event[i].price+""
+				}]).then(() => {
+					console.log("message terkirim");
+				}).catch((error) => {console.log('error', error);});
+        	}
+    	}
+	}
 }
 
 
