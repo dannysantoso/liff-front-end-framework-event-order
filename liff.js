@@ -100,13 +100,13 @@ function senddata(){
 				}).catch((error) => {console.log('error', error);
 				});*/
 				liff.sendMessages([{
-                'type': 'text',
-                'text': "Anda telah memesan tiket "+list_event[i].event+", pada tanggal "+list_event[i].date+" yang berlokasi di "+list_event[i].location+" dengan harga tiket "+list_event[i].price+""
-            }]).then(function() {
-                window.alert('Ini adalah pesan dari fitur Send Message');
-            }).catch(function(error) {
-                window.alert('Error sending message: ' + error);
-            });
+                	'type': 'text',
+                	'text': "Anda telah memesan tiket "+list_event[i].event+", pada tanggal "+list_event[i].date+" yang berlokasi di "+list_event[i].location+" dengan harga tiket "+list_event[i].price+""
+	            }]).then(function() {
+	                window.alert('Ini adalah pesan dari fitur Send Message');
+	            }).catch(function(error) {
+	                window.alert('Error sending message: ' + error);
+	            });
         	}
     	}
 	}
@@ -140,94 +140,99 @@ function kirimPesan2(){
             console.log('cant send message to line bcause its run in externalBrowser');
         } else {
 
-	var event = document.getElementById("event2").innerHTML;
-  var date = document.getElementById("date2").innerHTML;
-  var location = document.getElementById("location2").innerHTML;
-  var price = document.getElementById("price2").innerHTML;
+			var event = document.getElementById("event2").innerHTML;
+			var date = document.getElementById("date2").innerHTML;
+			var location = document.getElementById("location2").innerHTML;
+			var price = document.getElementById("price2").innerHTML;
 
-	liff.sendMessage([
-	{
-		'type' : 'text',
-		'text' : "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
-	}]).then(() => {
-		console.log("message terkirim");
-	}).catch((error) => {console.log('error', error);});
-}
+			liff.sendMessages([{
+                'type': 'text',
+                'text': "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
+            }]).then(function() {
+                window.alert('Ini adalah pesan dari fitur Send Message');
+            }).catch(function(error) {
+                window.alert('Error sending message: ' + error);
+            });
+	}
 }
 
 function kirimPesan3(){
 	if (liff.isInClient() == false) {
             console.log('cant send message to line bcause its run in externalBrowser');
         } else {
-	var event = document.getElementById("event3").innerHTML;
-  var date = document.getElementById("date3").innerHTML;
-  var location = document.getElementById("location3").innerHTML;
-  var price = document.getElementById("price3").innerHTML;
+			var event = document.getElementById("event3").innerHTML;
+  			var date = document.getElementById("date3").innerHTML;
+  			var location = document.getElementById("location3").innerHTML;
+  			var price = document.getElementById("price3").innerHTML;
 
-	liff.sendMessage([
-	{
-		type : 'text',
-		text : "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
-	}]).then(() => {
-		console.log("message terkirim");
-	}).catch((error) => {console.log('error', error);});
-}
+			liff.sendMessages([{
+                'type': 'text',
+                'text': "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
+            }]).then(function() {
+                window.alert('Ini adalah pesan dari fitur Send Message');
+            }).catch(function(error) {
+                window.alert('Error sending message: ' + error);
+            });
+	}
 }
 
 function kirimPesan4(){
 	if (liff.isInClient() == false) {
             console.log('cant send message to line bcause its run in externalBrowser');
         } else {
-	var event = document.getElementById("event4").innerHTML;
-  var date = document.getElementById("date4").innerHTML;
-  var location = document.getElementById("location4").innerHTML;
-  var price = document.getElementById("price4").innerHTML;
+			var event = document.getElementById("event4").innerHTML;
+  			var date = document.getElementById("date4").innerHTML;
+  			var location = document.getElementById("location4").innerHTML;
+  			var price = document.getElementById("price4").innerHTML;
 
-	liff.sendMessage([
-	{
-		type : 'text',
-		text : "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
-	}]).then(() => {
-		console.log("message terkirim");
-	}).catch((error) => {console.log('error', error);});
-}
+			liff.sendMessages([{
+                'type': 'text',
+                'text': "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
+            }]).then(function() {
+                window.alert('Ini adalah pesan dari fitur Send Message');
+            }).catch(function(error) {
+                window.alert('Error sending message: ' + error);
+            });
+	}
 }
 
 function kirimPesan5(){
 	if (liff.isInClient() == false) {
             console.log('cant send message to line bcause its run in externalBrowser');
         } else {
-	var event = document.getElementById("event5").innerHTML;
-  var date = document.getElementById("date5").innerHTML;
-  var location = document.getElementById("location5").innerHTML;
-  var price = document.getElementById("price5").innerHTML;
+			var event = document.getElementById("event5").innerHTML;
+  			var date = document.getElementById("date5").innerHTML;
+  			var location = document.getElementById("location5").innerHTML;
+  			var price = document.getElementById("price5").innerHTML;
 
-	liff.sendMessage([
-	{
-		type : 'text',
-		text : "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
-	}]).then(() => {
-		console.log("message terkirim");
-	}).catch((error) => {console.log('error', error);});
-}
+			liff.sendMessages([{
+                'type': 'text',
+                'text': "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
+            }]).then(function() {
+                window.alert('Ini adalah pesan dari fitur Send Message');
+            }).catch(function(error) {
+                window.alert('Error sending message: ' + error);
+            });
+	}
 }
 
 function kirimPesan6(){
 	if (liff.isInClient() == false) {
             console.log('cant send message to line bcause its run in externalBrowser');
         } else {
-	var event = document.getElementById("event6").innerHTML;
-  var date = document.getElementById("date6").innerHTML;
-  var location = document.getElementById("location6").innerHTML;
-  var price = document.getElementById("price6").innerHTML;
+			var event = document.getElementById("event6").innerHTML;
+  			var date = document.getElementById("date6").innerHTML;
+  			var location = document.getElementById("location6").innerHTML;
+  			var price = document.getElementById("price6").innerHTML;
 
-	liff.sendMessage([
-	{
-		type : 'text',
-		text : "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
-	}]).then(() => {
-		console.log("message terkirim");
-	}).catch((error) => {console.log('error', error);});
-}
+			liff.sendMessages([{
+                'type': 'text',
+                'text': "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
+            }]).then(function() {
+                window.alert('Ini adalah pesan dari fitur Send Message');
+            }).catch(function(error) {
+                window.alert('Error sending message: ' + error);
+            });
+	}
 }
 
