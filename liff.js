@@ -36,7 +36,7 @@ function startupApp(){
 }
 
 function cekBrowser() {
-    if (liff.isInClient()) {
+    if (liff.isInClient() == true) {
         document.getElementById("infoclient").innerHTML = 'You are opening the app in the in-app browser of LINE.';
     } else {
         document.getElementById("infoclient").innerHTML = 'You are opening the app in an external browser.';
@@ -109,7 +109,7 @@ function senddata(){
 
 
 function kirimPesan1(){
-	if (!liff.isInClient()) {
+	if (liff.isInClient() == false) {
             console.log('cant send message to line bcause its run in externalBrowser');
         } else {
             var event = document.getElementById("event").innerHTML;
@@ -128,7 +128,7 @@ function kirimPesan1(){
 }
 
 function kirimPesan2(){
-	if (!liff.isInClient()) {
+	if (liff.isInClient() == false) {
             console.log('cant send message to line bcause its run in externalBrowser');
         } else {
 
@@ -148,7 +148,7 @@ function kirimPesan2(){
 }
 
 function kirimPesan3(){
-	if (!liff.isInClient()) {
+	if (liff.isInClient() == false) {
             console.log('cant send message to line bcause its run in externalBrowser');
         } else {
 	var event = document.getElementById("event3").innerHTML;
@@ -167,7 +167,7 @@ function kirimPesan3(){
 }
 
 function kirimPesan4(){
-	if (!liff.isInClient()) {
+	if (liff.isInClient() == false) {
             console.log('cant send message to line bcause its run in externalBrowser');
         } else {
 	var event = document.getElementById("event4").innerHTML;
@@ -186,7 +186,7 @@ function kirimPesan4(){
 }
 
 function kirimPesan5(){
-	if (!liff.isInClient()) {
+	if (liff.isInClient() == false) {
             console.log('cant send message to line bcause its run in externalBrowser');
         } else {
 	var event = document.getElementById("event5").innerHTML;
@@ -205,7 +205,7 @@ function kirimPesan5(){
 }
 
 function kirimPesan6(){
-	if (!liff.isInClient()) {
+	if (liff.isInClient() == false) {
             console.log('cant send message to line bcause its run in externalBrowser');
         } else {
 	var event = document.getElementById("event6").innerHTML;
