@@ -89,7 +89,7 @@ function senddata(){
 	if (sessionStorage.list_event) {
         list_event = JSON.parse(sessionStorage.getItem('list_event'));
         if (list_event != null && list_event.length > 0) {
-            for (i in list_event) {
+            /*for (i in list_event) {
 	            
 	            liff.sendMessage([
 	            {
@@ -100,7 +100,15 @@ function senddata(){
 				}).catch((error) => {console.log('error', error);
 				});
 
-        	}
+        	}*/
+        	liff.sendMessages([{
+                'type': 'text',
+                'text': "Anda telah menggunakan fitur Send Message!"
+            }]).then(function() {
+                window.alert('Ini adalah pesan dari fitur Send Message');
+            }).catch(function(error) {
+                window.alert('Error sending message: ' + error);
+            });
     	}
 	}
 }
@@ -117,13 +125,14 @@ function kirimPesan1(){
   			var location = document.getElementById("location").innerHTML;
   			var price = document.getElementById("price").innerHTML;
 
-			liff.sendMessage([
-			{
-				'type' : 'text',
-				'text' : "Anda telah memesan tiket "
-			}]).then(() => {
-				console.log("message terkirim");
-			}).catch((error) => {console.log('error', error);});
+			liff.sendMessages([{
+                'type': 'text',
+                'text': "Anda telah menggunakan fitur Send Message!"
+            }]).then(function() {
+                window.alert('Ini adalah pesan dari fitur Send Message');
+            }).catch(function(error) {
+                window.alert('Error sending message: ' + error);
+            });
         }
 }
 
