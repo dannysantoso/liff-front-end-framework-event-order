@@ -38,9 +38,7 @@ function startupApp(){
 function cekBrowser() {
     if (liff.isInClient()) {
         document.getElementById("infoclient").innerHTML = 'You are opening the app in the in-app browser of LINE.';
-        document.getElementById("externalBrowser").disabled = false;
     } else {
-    	document.getElementById("externalBrowser").disabled = true;
         document.getElementById("infoclient").innerHTML = 'You are opening the app in an external browser.';
     }
 }
@@ -66,10 +64,12 @@ function loginUser(){
 }
 
 function getUsername(){
-	var name;
+	var name = "";
+	var id = "";
 	liff.getProfile()
 		.then(profile => {
-  			const name = profile.displayName
+  			const id = profile.userId;
+  			const name = profile.displayName;
 		})
 		.catch((err) => {
   			console.log('error', err);
@@ -78,7 +78,7 @@ function getUsername(){
   document.getElementById("event_list").style.display = "inline-block";
   document.getElementById("login").style.display = "none";
   document.getElementById("navbar").style.visibility = "visible";
-  document.getElementById("userbtn").innerHTML = name;
+  document.getElementById("userbtn").innerHTML = id+name;
 
 
 }
