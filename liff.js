@@ -65,10 +65,8 @@ function loginUser(){
 
 function getUsername(){
 	var name = "";
-	var id = "";
 	liff.getProfile()
 		.then(profile => {
-  			const id = profile.userId;
   			const name = profile.displayName;
 		})
 		.catch((err) => {
@@ -78,7 +76,7 @@ function getUsername(){
   document.getElementById("event_list").style.display = "inline-block";
   document.getElementById("login").style.display = "none";
   document.getElementById("navbar").style.visibility = "visible";
-  document.getElementById("userbtn").innerHTML = id+name;
+  document.getElementById("userbtn").innerHTML = name;
 
 
 }
