@@ -64,11 +64,11 @@ function loginUser(){
 }
 
 function getUsername(){
-	var name = "";
+	
 	liff.getProfile()
 		.then(profile => {
   			const name = profile.displayName;
-  			alert(name);
+  			document.getElementById("userbtn").innerHTML = name;
 		})
 		.catch((err) => {
   			console.log('error', err);
@@ -77,47 +77,61 @@ function getUsername(){
   document.getElementById("event_list").style.display = "inline-block";
   document.getElementById("login").style.display = "none";
   document.getElementById("navbar").style.visibility = "visible";
-  /*document.getElementById("userbtn").innerHTML = name;*/
+  
 
 
 }
 
 function senddata(){
+	if (!liff.isInClient()) {
+            alert('This button is unavailable as LIFF is currently being opened in an external browser.');
+        } else {
 	if (sessionStorage.list_event) {
         list_event = JSON.parse(sessionStorage.getItem('list_event'));
-        var data_app = "";
         if (list_event != null && list_event.length > 0) {
             for (i in list_event) {
+	            
 	            liff.sendMessage([
-				{
+	            {
 					type : 'text',
 					text : "Anda telah memesan tiket "+list_event[i].event+", pada tanggal "+list_event[i].date+" yang berlokasi di "+list_event[i].location+" dengan harga tiket "+list_event[i].price+""
 				}]).then(() => {
 					console.log("message terkirim");
-				}).catch((error) => {console.log('error', error);});
+				}).catch((error) => {console.log('error', error);
+				});
+
         	}
     	}
 	}
+}
 }
 
 
 
 function kirimPesan1(){
-	var event = document.getElementById("event").innerHTML;
-  var date = document.getElementById("date").innerHTML;
-  var location = document.getElementById("location").innerHTML;
-  var price = document.getElementById("price").innerHTML;
+	if (!liff.isInClient()) {
+            alert('This button is unavailable as LIFF is currently being opened in an external browser.');
+        } else {
+            var event = document.getElementById("event").innerHTML;
+  			var date = document.getElementById("date").innerHTML;
+  			var location = document.getElementById("location").innerHTML;
+  			var price = document.getElementById("price").innerHTML;
 
-	liff.sendMessage([
-	{
-		type : 'text',
-		text : "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
-	}]).then(() => {
-		console.log("message terkirim");
-	}).catch((error) => {console.log('error', error);});
+			liff.sendMessage([
+			{
+				type : 'text',
+				text : "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
+			}]).then(() => {
+				console.log("message terkirim");
+			}).catch((error) => {console.log('error', error);});
+        }
 }
 
 function kirimPesan2(){
+	if (!liff.isInClient()) {
+            alert('This button is unavailable as LIFF is currently being opened in an external browser.');
+        } else {
+
 	var event = document.getElementById("event2").innerHTML;
   var date = document.getElementById("date2").innerHTML;
   var location = document.getElementById("location2").innerHTML;
@@ -131,8 +145,12 @@ function kirimPesan2(){
 		console.log("message terkirim");
 	}).catch((error) => {console.log('error', error);});
 }
+}
 
 function kirimPesan3(){
+	if (!liff.isInClient()) {
+            alert('This button is unavailable as LIFF is currently being opened in an external browser.');
+        } else {
 	var event = document.getElementById("event3").innerHTML;
   var date = document.getElementById("date3").innerHTML;
   var location = document.getElementById("location3").innerHTML;
@@ -146,8 +164,12 @@ function kirimPesan3(){
 		console.log("message terkirim");
 	}).catch((error) => {console.log('error', error);});
 }
+}
 
 function kirimPesan4(){
+	if (!liff.isInClient()) {
+            alert('This button is unavailable as LIFF is currently being opened in an external browser.');
+        } else {
 	var event = document.getElementById("event4").innerHTML;
   var date = document.getElementById("date4").innerHTML;
   var location = document.getElementById("location4").innerHTML;
@@ -161,8 +183,12 @@ function kirimPesan4(){
 		console.log("message terkirim");
 	}).catch((error) => {console.log('error', error);});
 }
+}
 
 function kirimPesan5(){
+	if (!liff.isInClient()) {
+            alert('This button is unavailable as LIFF is currently being opened in an external browser.');
+        } else {
 	var event = document.getElementById("event5").innerHTML;
   var date = document.getElementById("date5").innerHTML;
   var location = document.getElementById("location5").innerHTML;
@@ -176,8 +202,12 @@ function kirimPesan5(){
 		console.log("message terkirim");
 	}).catch((error) => {console.log('error', error);});
 }
+}
 
 function kirimPesan6(){
+	if (!liff.isInClient()) {
+            alert('This button is unavailable as LIFF is currently being opened in an external browser.');
+        } else {
 	var event = document.getElementById("event6").innerHTML;
   var date = document.getElementById("date6").innerHTML;
   var location = document.getElementById("location6").innerHTML;
@@ -190,5 +220,6 @@ function kirimPesan6(){
 	}]).then(() => {
 		console.log("message terkirim");
 	}).catch((error) => {console.log('error', error);});
+}
 }
 

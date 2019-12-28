@@ -179,6 +179,8 @@ table td{
 		font-size: 16px;
 		margin-top: 20px; 
 		border: none;
+		float: right;
+		width: 200px;
 }
 
 
@@ -201,7 +203,7 @@ table{
 
 table th{
 	padding: 10px 0px;
-	font-size: 10px;
+	font-size: 14px;
 	background-color: #02C6F8;
 	color: white;
 }
@@ -235,5 +237,16 @@ table td{
 		margin-top: 20px; 
 		border: none;
 	}
+
+
+.sendData{
+	background-color: #02C6F8;
+		color: white;
+		padding: 15px;
+		font-size: 16px;
+		border: none;
+		width: 200px;
+		margin: 20px auto;
+}
 
 }
