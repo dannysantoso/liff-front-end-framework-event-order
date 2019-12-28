@@ -83,7 +83,7 @@ function getUsername(){
 }
 
 function senddata(){
-	if (!liff.isInClient()) {
+	if (liff.isInClient() == false) {
             alert('This button is unavailable as LIFF is currently being opened in an external browser.');
         } else {
 	if (sessionStorage.list_event) {
