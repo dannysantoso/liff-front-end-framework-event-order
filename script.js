@@ -177,8 +177,7 @@ function loadCatatan() {
 
             data_app += '</table><BUTTON>SEND DATA TO LINE</BUTTON>';
 
-        }
-        else (sessionStorage.list_event == false){
+        }else (list_event = null){
             data_app = "THERE ARE NO DATA";
         }
 
