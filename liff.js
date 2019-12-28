@@ -119,8 +119,8 @@ function kirimPesan1(){
 
 			liff.sendMessage([
 			{
-				type : 'text',
-				text : "Anda telah memesan tiket "
+				'type' : 'text',
+				'text' : "Anda telah memesan tiket "
 			}]).then(() => {
 				console.log("message terkirim");
 			}).catch((error) => {console.log('error', error);});
@@ -139,8 +139,8 @@ function kirimPesan2(){
 
 	liff.sendMessage([
 	{
-		type : 'text',
-		text : "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
+		'type' : 'text',
+		'text' : "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
 	}]).then(() => {
 		console.log("message terkirim");
 	}).catch((error) => {console.log('error', error);});
