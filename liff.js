@@ -74,43 +74,31 @@ function getUsername(){
   			console.log('error', err);
 		});
 		
-  document.getElementById("event_list").style.display = "inline-block";
-  document.getElementById("login").style.display = "none";
-  document.getElementById("navbar").style.visibility = "visible";
-  
-
-
+		  document.getElementById("event_list").style.display = "inline-block";
+		  document.getElementById("login").style.display = "none";
+		  document.getElementById("navbar").style.visibility = "visible";
 }
 
 function senddata(){
 	if (liff.isInClient() == false) {
             alert('This button is unavailable as LIFF is currently being opened in an external browser.');
         } else {
-	if (sessionStorage.list_event) {
-        list_event = JSON.parse(sessionStorage.getItem('list_event'));
-        if (list_event != null && list_event.length > 0) {
-            for (i in list_event) {
-	            
-	            /*liff.sendMessage([
-	            {
-					'type' : 'text',
-					'text' : "Anda telah memesan tiket "+list_event[i].event+", pada tanggal "+list_event[i].date+" yang berlokasi di "+list_event[i].location+" dengan harga tiket "+list_event[i].price+""
-				}]).then(() => {
-					console.log("message terkirim");
-				}).catch((error) => {console.log('error', error);
-				});*/
-				liff.sendMessages([{
-                	'type': 'text',
-                	'text': "Anda telah memesan tiket "+list_event[i].event+", pada tanggal "+list_event[i].date+" yang berlokasi di "+list_event[i].location+" dengan harga tiket "+list_event[i].price+""
-	            }]).then(function() {
-	                window.alert('Ini adalah pesan dari fitur Send Message');
-	            }).catch(function(error) {
-	                window.alert('Error sending message: ' + error);
-	            });
-        	}
-    	}
+			if (sessionStorage.list_event) {
+		        list_event = JSON.parse(sessionStorage.getItem('list_event'));
+		        if (list_event != null && list_event.length > 0) {
+		            for (i in list_event) {
+						liff.sendMessages([{
+		                	'type': 'text',
+		                	'text': "Anda telah memesan tiket "+list_event[i].event+", pada tanggal "+list_event[i].date+" yang berlokasi di "+list_event[i].location+" dengan harga tiket "+list_event[i].price+""
+			            }]).then(function() {
+			                console.log('mengirim pesan');
+			            }).catch(function(error) {
+			                window.alert('Error sending message: ' + error);
+			            });
+		        	}
+		    	}
+			}
 	}
-}
 }
 
 
@@ -128,7 +116,7 @@ function kirimPesan1(){
                 'type': 'text',
                 'text': "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
             }]).then(function() {
-                window.alert('Ini adalah pesan dari fitur Send Message');
+                console.log('mengirim pesan');
             }).catch(function(error) {
                 window.alert('Error sending message: ' + error);
             });
@@ -149,7 +137,7 @@ function kirimPesan2(){
                 'type': 'text',
                 'text': "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
             }]).then(function() {
-                window.alert('Ini adalah pesan dari fitur Send Message');
+                console.log('mengirim pesan');
             }).catch(function(error) {
                 window.alert('Error sending message: ' + error);
             });
@@ -169,7 +157,7 @@ function kirimPesan3(){
                 'type': 'text',
                 'text': "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
             }]).then(function() {
-                window.alert('Ini adalah pesan dari fitur Send Message');
+                console.log('mengirim pesan');
             }).catch(function(error) {
                 window.alert('Error sending message: ' + error);
             });
@@ -189,7 +177,7 @@ function kirimPesan4(){
                 'type': 'text',
                 'text': "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
             }]).then(function() {
-                window.alert('Ini adalah pesan dari fitur Send Message');
+                console.log('mengirim pesan');
             }).catch(function(error) {
                 window.alert('Error sending message: ' + error);
             });
@@ -209,7 +197,7 @@ function kirimPesan5(){
                 'type': 'text',
                 'text': "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
             }]).then(function() {
-                window.alert('Ini adalah pesan dari fitur Send Message');
+                console.log('mengirim pesan');
             }).catch(function(error) {
                 window.alert('Error sending message: ' + error);
             });
@@ -229,7 +217,7 @@ function kirimPesan6(){
                 'type': 'text',
                 'text': "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
             }]).then(function() {
-                window.alert('Ini adalah pesan dari fitur Send Message');
+                console.log('mengirim pesan');
             }).catch(function(error) {
                 window.alert('Error sending message: ' + error);
             });
