@@ -93,8 +93,8 @@ function senddata(){
 	            
 	            liff.sendMessage([
 	            {
-					type : 'text',
-					text : "Anda telah memesan tiket "+list_event[i].event+", pada tanggal "+list_event[i].date+" yang berlokasi di "+list_event[i].location+" dengan harga tiket "+list_event[i].price+""
+					'type' : 'text',
+					'text' : "Anda telah memesan tiket "+list_event[i].event+", pada tanggal "+list_event[i].date+" yang berlokasi di "+list_event[i].location+" dengan harga tiket "+list_event[i].price+""
 				}]).then(() => {
 					console.log("message terkirim");
 				}).catch((error) => {console.log('error', error);
