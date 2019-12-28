@@ -120,7 +120,7 @@ function kirimPesan1(){
 			liff.sendMessage([
 			{
 				type : 'text',
-				text : "Anda telah memesan tiket "+event+", pada tanggal "+date+" yang berlokasi di "+location+" dengan harga tiket "+price+""
+				text : "Anda telah memesan tiket "
 			}]).then(() => {
 				console.log("message terkirim");
 			}).catch((error) => {console.log('error', error);});
