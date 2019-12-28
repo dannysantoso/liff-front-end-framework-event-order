@@ -172,6 +172,14 @@ table td{
 		border: none;
 	}
 
+.sendData{
+	background-color: #02C6F8;
+		color: white;
+		padding: 15px;
+		font-size: 16px;
+		margin-top: 20px; 
+		border: none;
+}
 
 
 
@@ -203,5 +211,29 @@ table td{
 	font-size: 10px;
 }
 
+
+.login{
+		width: 400px;
+		text-align: center;
+		margin: 0px auto;
+	}
+
+	.loginbtn{
+		background-color: #00c300;
+		color: white;
+		padding: 15px;
+		font-size: 16px;
+		margin: 20px;
+		border: none;
+	}
+
+	.externalBrowser{
+		background-color: #02C6F8;
+		color: white;
+		padding: 15px;
+		font-size: 16px;
+		margin-top: 20px; 
+		border: none;
+	}
 
 }

@@ -68,6 +68,7 @@ function getUsername(){
 	liff.getProfile()
 		.then(profile => {
   			const name = profile.displayName;
+  			alert(name);
 		})
 		.catch((err) => {
   			console.log('error', err);
@@ -76,9 +77,25 @@ function getUsername(){
   document.getElementById("event_list").style.display = "inline-block";
   document.getElementById("login").style.display = "none";
   document.getElementById("navbar").style.visibility = "visible";
-  document.getElementById("userbtn").innerHTML = name;
+  /*document.getElementById("userbtn").innerHTML = name;*/
 
 
+}
+
+function senddata(){
+	if (sessionStorage.list_event) {
+        list_event = JSON.parse(sessionStorage.getItem('list_event'));
+        var data_app = "";
+        if (list_event != null && list_event.length > 0) {
+            for (i in list_event) {
+            liff.sendMessage([
+			{
+				type : 'text',
+				text : "Anda telah memesan tiket "+list_event[i].event+", pada tanggal "+list_event[i].date+" yang berlokasi di "+list_event[i].location+" dengan harga tiket "+list_event[i].price+""
+			}]).then(() => {
+				console.log("message terkirim");
+			}).catch((error) => {console.log('error', error);});
+        }
 }
 
 

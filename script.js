@@ -175,7 +175,7 @@ function loadCatatan() {
                 data_app += '</tr>';
             }
 
-            data_app += '</table><BUTTON>SEND DATA TO LINE</BUTTON>';
+            data_app += '</table><BUTTON class="sendData" onclick="senddata()">SEND DATA TO LINE</BUTTON>';
 
         }else {
             data_app = "THERE ARE NO DATA";
