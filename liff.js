@@ -1,6 +1,6 @@
 window.onload = function() {
     const useNodeJS = false;  
-    const defaultLiffId = "1653716067-3Glwdagk";  
+    const defaultLiffId = "";  //input your liff id in your line developer
 
     let myLiffId = "";
 
